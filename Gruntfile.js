@@ -2,8 +2,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-            development:{
-                files:{
+            development: {
+                files: {
                     'dev/styles/main.css': 'src/styles/main.less'
                 }
             },
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                 tasks: ['less:development']
             },
             html: {
-                files:['src/index.html'],
+                files: ['src/index.html'],
                 tasks: ['replace:dev']
             }
         },
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flattend: true,
+                        flatten: true,
                         src: ['src/index.html'],
                         dest: 'dev/'
                     }
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flattend: true,
+                        flatten: true,
                         src: ['prebuild/index.html'],
                         dest: 'dist/' 
                     }
